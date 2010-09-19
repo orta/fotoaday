@@ -43,11 +43,12 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 	if ([self.flickrContext.authToken length]) {
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[flickrRequest callAPIMethodWithGET:@"flickr.auth.checkToken" arguments:nil];
-    
-    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [mainViewController presentModalViewController:imagePicker animated:YES];
-    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES){
+      UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+      imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+      [mainViewController presentModalViewController:imagePicker animated:YES];      
+    }
+
 	}else{
 
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
@@ -99,6 +100,7 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 }
 
 - (void)setAndStoreFlickrAuthToken:(NSString *)inAuthToken {
+  NSLog(@"storing token");
 	if (![inAuthToken length]) {
 		self.flickrContext.authToken = nil;
 		[[NSUserDefaults standardUserDefaults] removeObjectForKey:kStoredAuthTokenKeyName];
