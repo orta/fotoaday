@@ -7,16 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ObjectiveFlickr.h"
+#import "FlipsideViewController.h"
 
 @class MainViewController;
+@class FlipsideViewController;
 
-@interface fotoadayAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    MainViewController *mainViewController;
+@interface fotoadayAppDelegate : NSObject <UIApplicationDelegate, OFFlickrAPIRequestDelegate, FlipsideViewControllerDelegate> {
+  UIWindow *window;
+  MainViewController *mainViewController;
+  FlipsideViewController *flipViewController;
+  
+  NSString *flickrUserName;
+
+  OFFlickrAPIContext *flickrContext;
+	OFFlickrAPIRequest *flickrRequest;
+
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet MainViewController *mainViewController;
+@property (nonatomic, retain) IBOutlet FlipsideViewController 
+*flipViewController;
+
+@property (nonatomic, readonly) OFFlickrAPIContext *flickrContext;
+@property (nonatomic, retain) NSString *flickrUserName;
+
+- (OFFlickrAPIContext *)flickrContext;
+- (OFFlickrAPIRequest *)flickrRequest;
+
+- (void)setAndStoreFlickrAuthToken:(NSString *)inAuthToken;
 
 @end
-

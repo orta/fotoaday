@@ -11,15 +11,6 @@
 
 @implementation MainViewController
 
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-	[super viewDidLoad];
-}
-*/
-
-
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
     
 	[self dismissModalViewControllerAnimated:YES];
@@ -31,7 +22,7 @@
 	FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
 	controller.delegate = self;
 	
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 	[self presentModalViewController:controller animated:YES];
 	
 	[controller release];
