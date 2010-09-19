@@ -24,6 +24,10 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>still-camera</string>
+	</array>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
 	<key>CFBundleURLTypes</key>
