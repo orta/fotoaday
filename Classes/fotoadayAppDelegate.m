@@ -69,8 +69,7 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 
 #pragma mark FlipsideViewController delegate methods
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
-  
-	[mainViewController dismissModalViewControllerAnimated:YES];
+  [mainViewController dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -130,6 +129,11 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 	
 	return flickrRequest;
 }
+
++ (fotoadayAppDelegate *)sharedDelegate {
+  return (fotoadayAppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

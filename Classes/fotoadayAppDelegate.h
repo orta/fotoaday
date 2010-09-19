@@ -36,6 +36,8 @@
 - (OFFlickrAPIContext *)flickrContext;
 - (OFFlickrAPIRequest *)flickrRequest;
 
++ (fotoadayAppDelegate *)sharedDelegate;
+
 - (void)setAndStoreFlickrAuthToken:(NSString *)inAuthToken;
 
 @end
