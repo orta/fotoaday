@@ -28,7 +28,7 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
   [window addSubview:mainViewController.view];
   [window makeKeyAndVisible];
-  
+    
   [self performSelector:@selector(_applicationDidFinishLaunchingContinued) withObject:nil afterDelay:0.0];
 
   return YES;
@@ -43,11 +43,15 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 	if ([self.flickrContext.authToken length]) {
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[flickrRequest callAPIMethodWithGET:@"flickr.auth.checkToken" arguments:nil];
+    
+    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [mainViewController presentModalViewController:imagePicker animated:YES];
+    
 	}else{
 
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
-    controller.delegate = self;
-    
+    controller.delegate = self;    
     controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [mainViewController presentModalViewController:controller animated:YES];
     
