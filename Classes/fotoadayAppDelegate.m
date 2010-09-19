@@ -26,6 +26,8 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+  [window addSubview:mainViewController.view];
+  [window makeKeyAndVisible];
   
   [self performSelector:@selector(_applicationDidFinishLaunchingContinued) withObject:nil afterDelay:0.0];
 
@@ -42,8 +44,6 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[flickrRequest callAPIMethodWithGET:@"flickr.auth.checkToken" arguments:nil];
 	}else{
-    [window addSubview:mainViewController.view];
-    [window makeKeyAndVisible];
 
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
     controller.delegate = self;
@@ -74,8 +74,7 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 
 
 #pragma mark OFFlickrAPIRequest delegate methods
-- (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didCompleteWithResponse:(NSDictionary *)inResponseDictionary
-{
+- (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didCompleteWithResponse:(NSDictionary *)inResponseDictionary {
 	if (inRequest.sessionInfo == kGetAuthTokenStep) {
 		[self setAndStoreFlickrAuthToken:[[inResponseDictionary valueForKeyPath:@"auth.token"] textContent]];
 		self.flickrUserName = [inResponseDictionary valueForKeyPath:@"auth.user.username"];
@@ -85,8 +84,7 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 	}
 }
 
-- (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didFailWithError:(NSError *)inError
-{
+- (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didFailWithError:(NSError *)inError {
 	if (inRequest.sessionInfo == kGetAuthTokenStep) {
 	}
 	else if (inRequest.sessionInfo == kCheckTokenStep) {

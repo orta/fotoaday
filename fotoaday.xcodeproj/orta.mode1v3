@@ -274,8 +274,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
-									<integer>13</integer>
+									<integer>9</integer>
+									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FlipsideViewController.h</string>
+								<string>fotoadayAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,20 +325,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FlipsideViewController.h</string>
+										<string>fotoadayAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>6096646B1246A33E006C7E28</string>
+										<string>6096647E1246A64E006C7E28</string>
 										<key>history</key>
 										<array>
 											<string>609663D9124698E9006C7E28</string>
 											<string>6096642D12469E52006C7E28</string>
-											<string>6096643B12469EE9006C7E28</string>
-											<string>6096644C1246A154006C7E28</string>
 											<string>609664661246A2CE006C7E28</string>
 											<string>6096646A1246A33E006C7E28</string>
-											<string>6096643012469E52006C7E28</string>
+											<string>609664741246A434006C7E28</string>
+											<string>609664751246A434006C7E28</string>
+											<string>6096644C1246A154006C7E28</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

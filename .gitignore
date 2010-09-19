@@ -8,7 +8,7 @@
 build/*
 
 # Textmate - if you build your xcode projects with it
-*.tm_build_errors
+*.tm_build_errorsg
 
 # old skool
 .svn
