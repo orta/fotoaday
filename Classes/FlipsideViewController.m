@@ -7,7 +7,7 @@
 //
 
 #import "FlipsideViewController.h"
-
+#import "fotoadayAppDelegate.h"
 
 @implementation FlipsideViewController
 
@@ -23,6 +23,12 @@
 - (IBAction)done:(id)sender {
 	[self.delegate flipsideViewControllerDidFinish:self];	
 }
+
+- (IBAction)auth:(id)sender {
+  NSURL *loginURL = [[fotoadayAppDelegate sharedDelegate].flickrContext loginURLFromFrobDictionary:nil requestedPermission:OFFlickrWritePermission];
+  [[UIApplication sharedApplication] openURL:loginURL];
+}
+
 
 
 - (void)didReceiveMemoryWarning {

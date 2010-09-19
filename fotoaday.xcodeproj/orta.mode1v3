@@ -274,8 +274,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>7</integer>
+									<integer>14</integer>
+									<integer>13</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>fotoadayAppDelegate.h</string>
+								<string>FlipsideViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,20 +325,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>fotoadayAppDelegate.h</string>
+										<string>FlipsideViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>6096644D1246A154006C7E28</string>
+										<string>6096646B1246A33E006C7E28</string>
 										<key>history</key>
 										<array>
 											<string>609663D9124698E9006C7E28</string>
 											<string>6096642D12469E52006C7E28</string>
-											<string>6096643012469E52006C7E28</string>
 											<string>6096643B12469EE9006C7E28</string>
-											<string>6096644B1246A154006C7E28</string>
 											<string>6096644C1246A154006C7E28</string>
-											<string>6096643112469E52006C7E28</string>
+											<string>609664661246A2CE006C7E28</string>
+											<string>6096646A1246A33E006C7E28</string>
+											<string>6096643012469E52006C7E28</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -536,9 +536,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>6096637312468C03006C7E28</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/orta/spiel/iphone/fotoaday/fotoaday.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -876,6 +876,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -886,18 +888,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {650, 209}}</string>
+								<string>{{0, 0}, {871, 344}}</string>
 								<key>RubberWindowFrame</key>
-								<string>217 593 650 250 0 0 1440 878 </string>
+								<string>217 458 871 385 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
 							<key>Proportion</key>
-							<string>209pt</string>
+							<string>344pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>209pt</string>
+					<string>344pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -917,11 +919,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>217 593 650 250 0 0 1440 878 </string>
+			<string>217 458 871 385 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
