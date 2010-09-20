@@ -10,9 +10,9 @@
 	};
 	1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {964, 2652}}";
-			sepNavSelRange = "{1590, 0}";
-			sepNavVisRange = "{547, 1648}";
+			sepNavIntBoundsRect = "{{0, 0}, {976, 2743}}";
+			sepNavSelRange = "{1762, 0}";
+			sepNavVisRange = "{504, 1965}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* fotoaday */ = {
@@ -67,7 +67,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					548,
+					798,
 					20,
 					48,
 					43,
@@ -106,23 +106,21 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 306624226;
-			PBXWorkspaceStateSaveDate = 306624226;
+			PBXPerProjectTemplateStateSaveDate = 306698008;
+			PBXWorkspaceStateSaveDate = 306698008;
 		};
 		perUserProjectItems = {
-			609663D9124698E9006C7E28 = 609663D9124698E9006C7E28 /* PlistBookmark */;
 			6096642D12469E52006C7E28 = 6096642D12469E52006C7E28 /* PBXTextBookmark */;
 			609664661246A2CE006C7E28 = 609664661246A2CE006C7E28 /* PBXTextBookmark */;
 			6096646A1246A33E006C7E28 = 6096646A1246A33E006C7E28 /* PBXTextBookmark */;
 			609664741246A434006C7E28 = 609664741246A434006C7E28 /* PBXTextBookmark */;
 			609664751246A434006C7E28 = 609664751246A434006C7E28 /* PBXTextBookmark */;
-			609664BA1246AC42006C7E28 = 609664BA1246AC42006C7E28 /* PBXTextBookmark */;
-			60B267E41246B6E8002D26D7 /* PBXTextBookmark */ = 60B267E41246B6E8002D26D7 /* PBXTextBookmark */;
-			60B267FD1246B746002D26D7 /* PBXTextBookmark */ = 60B267FD1246B746002D26D7 /* PBXTextBookmark */;
-			60B267FE1246B777002D26D7 /* PBXTextBookmark */ = 60B267FE1246B777002D26D7 /* PBXTextBookmark */;
-			60B268031246B7F3002D26D7 /* PBXTextBookmark */ = 60B268031246B7F3002D26D7 /* PBXTextBookmark */;
-			60B268041246B809002D26D7 /* PBXTextBookmark */ = 60B268041246B809002D26D7 /* PBXTextBookmark */;
-			60F45E9D1246B3B4002592C6 = 60F45E9D1246B3B4002592C6 /* PBXTextBookmark */;
+			60A710491247D71B00F4CD3E /* PBXTextBookmark */ = 60A710491247D71B00F4CD3E /* PBXTextBookmark */;
+			60A710511247D7B000F4CD3E /* PBXTextBookmark */ = 60A710511247D7B000F4CD3E /* PBXTextBookmark */;
+			60A710521247D7B000F4CD3E /* PBXTextBookmark */ = 60A710521247D7B000F4CD3E /* PBXTextBookmark */;
+			60B268051246B931002D26D7 = 60B268051246B931002D26D7 /* PlistBookmark */;
+			60B268061246B931002D26D7 = 60B268061246B931002D26D7 /* PBXTextBookmark */;
+			60B268071246B931002D26D7 = 60B268071246B931002D26D7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 6096637512468C03006C7E28 /* Source Control */;
 		userBuildSettings = {
@@ -171,21 +169,6 @@
 	6096637612468C03006C7E28 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	609663D9124698E9006C7E28 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* fotoaday-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleURLTypes,
-			0,
-			CFBundleURLSchemes,
-			0,
-		);
-		name = "/Users/orta/spiel/iphone/fotoaday/fotoaday-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	6096642D12469E52006C7E28 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -237,74 +220,65 @@
 		vrLen = 1325;
 		vrLoc = 0;
 	};
-	609664BA1246AC42006C7E28 /* PBXTextBookmark */ = {
+	60A710491247D71B00F4CD3E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
-		name = "fotoadayAppDelegate.m: 61";
+		name = "fotoadayAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 1947;
+		rLoc = 921;
 		rType = 0;
-		vrLen = 1927;
-		vrLoc = 293;
+		vrLen = 1691;
+		vrLoc = 504;
 	};
-	60B267E41246B6E8002D26D7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
-		name = "fotoadayAppDelegate.m: 27";
-		rLen = 0;
-		rLoc = 599;
-		rType = 0;
-		vrLen = 1797;
-		vrLoc = 0;
-	};
-	60B267FD1246B746002D26D7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
-		name = "fotoadayAppDelegate.m: 81";
-		rLen = 0;
-		rLoc = 2719;
-		rType = 0;
-		vrLen = 1853;
-		vrLoc = 1834;
-	};
-	60B267FE1246B777002D26D7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
-		name = "fotoadayAppDelegate.m: 102";
-		rLen = 0;
-		rLoc = 3613;
-		rType = 0;
-		vrLen = 1565;
-		vrLoc = 2847;
-	};
-	60B268031246B7F3002D26D7 /* PBXTextBookmark */ = {
+	60A710511247D7B000F4CD3E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1590;
+		rLoc = 1763;
 		rType = 0;
-		vrLen = 1648;
-		vrLoc = 547;
+		vrLen = 1627;
+		vrLoc = 504;
 	};
-	60B268041246B809002D26D7 /* PBXTextBookmark */ = {
+	60A710521247D7B000F4CD3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
+		name = "fotoadayAppDelegate.m: 53";
+		rLen = 0;
+		rLoc = 1762;
+		rType = 0;
+		vrLen = 1965;
+		vrLoc = 504;
+	};
+	60B268051246B931002D26D7 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* fotoaday-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/orta/spiel/iphone/fotoaday/fotoaday-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	60B268061246B931002D26D7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1590;
+		rLoc = 1864;
 		rType = 0;
-		vrLen = 1648;
-		vrLoc = 547;
+		vrLen = 1827;
+		vrLoc = 504;
 	};
-	60F45E9D1246B3B4002592C6 /* PBXTextBookmark */ = {
+	60B268071246B931002D26D7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
-		name = "fotoadayAppDelegate.m: 46";
+		name = "fotoadayAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 1590;
+		rLoc = 921;
 		rType = 0;
-		vrLen = 1797;
-		vrLoc = 0;
+		vrLen = 1827;
+		vrLoc = 504;
 	};
 }

@@ -43,11 +43,18 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
 	if ([self.flickrContext.authToken length]) {
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[flickrRequest callAPIMethodWithGET:@"flickr.auth.checkToken" arguments:nil];
+   
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES){
       UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
       imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
       [mainViewController presentModalViewController:imagePicker animated:YES];      
+    }else {
+      UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+      imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+      [mainViewController presentModalViewController:imagePicker animated:YES];      
+      
     }
+
 
 	}else{
 
