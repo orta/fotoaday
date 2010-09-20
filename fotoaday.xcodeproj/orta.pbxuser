@@ -187,6 +187,7 @@
 			60A7110B1247E50800F4CD3E /* PBXTextBookmark */ = 60A7110B1247E50800F4CD3E /* PBXTextBookmark */;
 			60A7110C1247E50800F4CD3E /* PBXTextBookmark */ = 60A7110C1247E50800F4CD3E /* PBXTextBookmark */;
 			60A7110D1247E50800F4CD3E /* PBXTextBookmark */ = 60A7110D1247E50800F4CD3E /* PBXTextBookmark */;
+			60A711121247E61900F4CD3E /* PBXTextBookmark */ = 60A711121247E61900F4CD3E /* PBXTextBookmark */;
 			60B268051246B931002D26D7 = 60B268051246B931002D26D7 /* PlistBookmark */;
 			60B268061246B931002D26D7 = 60B268061246B931002D26D7 /* PBXTextBookmark */;
 			60B268071246B931002D26D7 = 60B268071246B931002D26D7 /* PBXTextBookmark */;
@@ -583,8 +584,8 @@
 	60A710B11247DC2400F4CD3E /* NotificationController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {976, 669}}";
-			sepNavSelRange = "{347, 0}";
-			sepNavVisRange = "{0, 1408}";
+			sepNavSelRange = "{542, 0}";
+			sepNavVisRange = "{0, 1386}";
 		};
 	};
 	60A710B71247DD0600F4CD3E /* PBXTextBookmark */ = {
@@ -641,7 +642,7 @@
 		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
 		name = "NotificationController.m: 15";
 		rLen = 0;
-		rLoc = 1408;
+		rLoc = 1386;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 0;
@@ -691,7 +692,7 @@
 		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
 		name = "NotificationController.m: 17";
 		rLen = 0;
-		rLoc = 1249;
+		rLoc = 1227;
 		rType = 0;
 		vrLen = 296;
 		vrLoc = 0;
@@ -741,7 +742,7 @@
 		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
 		name = "NotificationController.m: 31";
 		rLen = 0;
-		rLoc = 1400;
+		rLoc = 1378;
 		rType = 0;
 		vrLen = 946;
 		vrLoc = 0;
@@ -751,7 +752,7 @@
 		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
 		name = "NotificationController.m: 37";
 		rLen = 0;
-		rLoc = 1319;
+		rLoc = 1297;
 		rType = 0;
 		vrLen = 1213;
 		vrLoc = 0;
@@ -941,7 +942,7 @@
 		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
 		name = "NotificationController.m: 42";
 		rLen = 0;
-		rLoc = 1398;
+		rLoc = 1376;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 0;
@@ -951,7 +952,7 @@
 		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
 		name = "NotificationController.m: 37";
 		rLen = 0;
-		rLoc = 1240;
+		rLoc = 1223;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 0;
@@ -1001,7 +1002,7 @@
 		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
 		name = "NotificationController.m: 37";
 		rLen = 0;
-		rLoc = 1240;
+		rLoc = 1223;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 0;
@@ -1014,6 +1015,16 @@
 		rLoc = 347;
 		rType = 0;
 		vrLen = 1408;
+		vrLoc = 0;
+	};
+	60A711121247E61900F4CD3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */;
+		name = "NotificationController.m: 21";
+		rLen = 0;
+		rLoc = 542;
+		rType = 0;
+		vrLen = 1386;
 		vrLoc = 0;
 	};
 	60B268051246B931002D26D7 /* PlistBookmark */ = {

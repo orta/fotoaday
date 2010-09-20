@@ -33,9 +33,7 @@
   }
   count++;
   [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"number_of_days"];
-
-  NSLog(@"DEATH?");
-  
+ 
 }
 
 + (NSString *) currentDayCount{
