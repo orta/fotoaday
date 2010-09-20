@@ -13,7 +13,8 @@
 @class MainViewController;
 @class FlipsideViewController;
 
-@interface fotoadayAppDelegate : NSObject <UIApplicationDelegate, OFFlickrAPIRequestDelegate, FlipsideViewControllerDelegate> {
+@interface fotoadayAppDelegate : NSObject <UIApplicationDelegate, OFFlickrAPIRequestDelegate, UIImagePickerControllerDelegate, 
+                                           FlipsideViewControllerDelegate, UINavigationControllerDelegate> {
   UIWindow *window;
   MainViewController *mainViewController;
   FlipsideViewController *flipViewController;

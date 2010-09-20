@@ -14,6 +14,10 @@ NSString *kStoredAuthTokenKeyName = @"FlickrAuthToken";
 NSString *kGetAuthTokenStep = @"kGetAuthTokenStep";
 NSString *kCheckTokenStep = @"kCheckTokenStep";
 
+NSString *kGetUserInfoStep = @"kGetUserInfoStep";
+NSString *kSetImagePropertiesStep = @"kSetImagePropertiesStep";
+NSString *kUploadImageStep = @"kUploadImageStep";
+
 @implementation fotoadayAppDelegate
 
 
@@ -47,12 +51,13 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES){
       UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
       imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+      imagePicker.delegate = self;
       [mainViewController presentModalViewController:imagePicker animated:YES];      
     }else {
       UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
       imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+      imagePicker.delegate = self;
       [mainViewController presentModalViewController:imagePicker animated:YES];      
-      
     }
 
 
@@ -67,11 +72,27 @@ NSString *kCheckTokenStep = @"kCheckTokenStep";
   }
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+  [mainViewController dismissModalViewControllerAnimated:YES];
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)img editingInfo:(NSDictionary *)editInfo {
+  [mainViewController dismissModalViewControllerAnimated:YES];
+  [self performSelector:@selector(_startUpload:) withObject:img afterDelay:0.0];
+}
+
+- (void)_startUpload:(UIImage *)image {
+  NSData *JPEGData = UIImageJPEGRepresentation(image, 1.0);
+  self.flickrRequest.sessionInfo = kUploadImageStep;
+  [self.flickrRequest uploadImageStream:[NSInputStream inputStreamWithData:JPEGData] suggestedFilename:@"" MIMEType:@"image/jpeg" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"is_public", nil]];
+}
+
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
 	// query has the form of "&frob=", the rest is the frob
 	NSString *frob = [[url query] substringFromIndex:6];
-  
 	[self flickrRequest].sessionInfo = kGetAuthTokenStep;
 	[flickrRequest callAPIMethodWithGET:@"flickr.auth.getToken" arguments:[NSDictionary dictionaryWithObjectsAndKeys:frob, @"frob", nil]];
 		
