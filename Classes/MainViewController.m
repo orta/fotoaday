@@ -16,6 +16,9 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+- (void) setStatus:(NSString*) status{
+  [infoLabel setText:status];
+}
 
 - (IBAction)showInfo:(id)sender {    
 	

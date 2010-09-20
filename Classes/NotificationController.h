@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface NotificationController : NSObject {
-
-  
-}
+@interface NotificationController : NSObject {}
 
 + (void) createNextNotification;
 + (NSString *) currentDayCount;

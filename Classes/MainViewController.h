@@ -9,7 +9,10 @@
 #import "FlipsideViewController.h"
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
+  IBOutlet UILabel *infoLabel;
+
 }
+- (void) setStatus:(NSString*) status;
 
 - (IBAction)showInfo:(id)sender;
 

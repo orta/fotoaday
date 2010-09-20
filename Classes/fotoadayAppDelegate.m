@@ -33,7 +33,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
   [window addSubview:mainViewController.view];
   [window makeKeyAndVisible];
   [self performSelector:@selector(_applicationDidFinishLaunchingContinued) withObject:nil afterDelay:0.0];
-
+  [mainViewController setStatus:@"loading"];
   return YES;
 }
 
@@ -47,18 +47,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[flickrRequest callAPIMethodWithGET:@"flickr.auth.checkToken" arguments:nil];
    
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES){
-      UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
-      imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-      imagePicker.delegate = self;
-      [mainViewController presentModalViewController:imagePicker animated:YES];      
-    }else {
-      UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
-      imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-      imagePicker.delegate = self;
-      [mainViewController presentModalViewController:imagePicker animated:YES];      
-    }
-
+    [self callImagePicker];
 
 	}else{
 
@@ -72,7 +61,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-  [mainViewController dismissModalViewControllerAnimated:YES];
+    [mainViewController setStatus:@"cancelled?"];
 }
 
 
@@ -82,14 +71,36 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 }
 
 - (void)_startUpload:(UIImage *)image {
-//  NSData *JPEGData = UIImageJPEGRepresentation(image, 1.0);
-//  self.flickrRequest.sessionInfo = kUploadImageStep;
-//  [self.flickrRequest uploadImageStream:[NSInputStream inputStreamWithData:JPEGData] suggestedFilename:@"" MIMEType:@"image/jpeg" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"is_public", nil]];
+  [mainViewController setStatus:@"uploading"];
+
+  NSData *JPEGData = UIImageJPEGRepresentation(image, 1.0);
+  self.flickrRequest.sessionInfo = kUploadImageStep;
+  [self.flickrRequest uploadImageStream:[NSInputStream inputStreamWithData:JPEGData] suggestedFilename:@"" MIMEType:@"image/jpeg" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"is_public", nil]];
   
   [NotificationController createNextNotification];
 }
 
-
+- (void) callImagePicker{
+  if ([mainViewController modalViewController]) {
+    [mainViewController dismissModalViewControllerAnimated:YES];
+  }
+  
+  if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES){
+    [mainViewController setStatus:@"shooting"];
+    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.delegate = self;
+    [mainViewController presentModalViewController:imagePicker animated:YES];     
+    
+  }else {
+    
+    [mainViewController setStatus:@"grabbing"];
+    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.delegate = self;
+    [mainViewController presentModalViewController:imagePicker animated:YES];      
+  }  
+}
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
 	// query has the form of "&frob=", the rest is the frob
@@ -112,10 +123,26 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 	if (inRequest.sessionInfo == kGetAuthTokenStep) {
 		[self setAndStoreFlickrAuthToken:[[inResponseDictionary valueForKeyPath:@"auth.token"] textContent]];
 		self.flickrUserName = [inResponseDictionary valueForKeyPath:@"auth.user.username"];
+    [mainViewController setStatus:[NSString stringWithFormat:@">_ %@", self.flickrUserName]];
+    [self callImagePicker];
+
 	}
 	else if (inRequest.sessionInfo == kCheckTokenStep) {
 		self.flickrUserName = [inResponseDictionary valueForKeyPath:@"auth.user.username"];
 	}
+  
+  if (inRequest.sessionInfo == kUploadImageStep) {    
+    [mainViewController setStatus:@"almost there!"];    
+    NSString *photoID = [[inResponseDictionary valueForKeyPath:@"photoid"] textContent];
+    
+    flickrRequest.sessionInfo = kSetImagePropertiesStep;
+    [flickrRequest callAPIMethodWithPOST:@"flickr.photos.setMeta" arguments:[NSDictionary dictionaryWithObjectsAndKeys:photoID, @"photo_id", @"fotoaday 1", @"title", @"fotoaday", @"description", nil]];        		        
+	}
+  else if (inRequest.sessionInfo == kSetImagePropertiesStep) {
+    [mainViewController setStatus:@"done!"];
+  }
+  
+  
 }
 
 - (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didFailWithError:(NSError *)inError {
@@ -138,6 +165,8 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 		self.flickrContext.authToken = inAuthToken;
 		[[NSUserDefaults standardUserDefaults] setObject:inAuthToken forKey:kStoredAuthTokenKeyName];
 	}
+  [[NSUserDefaults standardUserDefaults] synchronize];
+
 }
 
 
@@ -148,6 +177,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
     NSString *authToken;
     if (authToken = [[NSUserDefaults standardUserDefaults] objectForKey:kStoredAuthTokenKeyName]) {
       flickrContext.authToken = authToken;
+      NSLog(@"Token found");
     }
   }
   

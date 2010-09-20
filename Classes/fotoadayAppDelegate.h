@@ -22,13 +22,12 @@
   NSString *flickrUserName;
 
   OFFlickrAPIContext *flickrContext;
-	OFFlickrAPIRequest *flickrRequest;                                             
-}
+	OFFlickrAPIRequest *flickrRequest;        
+  }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet MainViewController *mainViewController;
-@property (nonatomic, retain) IBOutlet FlipsideViewController 
-*flipViewController;
+@property (nonatomic, retain) IBOutlet FlipsideViewController *flipViewController;
 
 @property (nonatomic, readonly) OFFlickrAPIContext *flickrContext;
 @property (nonatomic, retain) NSString *flickrUserName;
@@ -38,6 +37,6 @@
 
 + (fotoadayAppDelegate *)sharedDelegate;
 
-- (void)setAndStoreFlickrAuthToken:(NSString *)inAuthToken;
-
+- (void) setAndStoreFlickrAuthToken:(NSString *)inAuthToken;
+- (void) callImagePicker;
 @end
