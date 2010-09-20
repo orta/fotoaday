@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ObjectiveFlickr.h"
 #import "FlipsideViewController.h"
+#import "NotificationController.h"
 
 @class MainViewController;
 @class FlipsideViewController;
 
-@interface fotoadayAppDelegate : NSObject <UIApplicationDelegate, OFFlickrAPIRequestDelegate, UIImagePickerControllerDelegate, 
-                                           FlipsideViewControllerDelegate, UINavigationControllerDelegate> {
+@interface fotoadayAppDelegate : NSObject <UIApplicationDelegate, OFFlickrAPIRequestDelegate, UIImagePickerControllerDelegate, FlipsideViewControllerDelegate, UINavigationControllerDelegate> {
   UIWindow *window;
   MainViewController *mainViewController;
   FlipsideViewController *flipViewController;
@@ -22,8 +22,7 @@
   NSString *flickrUserName;
 
   OFFlickrAPIContext *flickrContext;
-	OFFlickrAPIRequest *flickrRequest;
-
+	OFFlickrAPIRequest *flickrRequest;                                             
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

@@ -32,7 +32,6 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
   [window addSubview:mainViewController.view];
   [window makeKeyAndVisible];
-    
   [self performSelector:@selector(_applicationDidFinishLaunchingContinued) withObject:nil afterDelay:0.0];
 
   return YES;
@@ -83,9 +82,11 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 }
 
 - (void)_startUpload:(UIImage *)image {
-  NSData *JPEGData = UIImageJPEGRepresentation(image, 1.0);
-  self.flickrRequest.sessionInfo = kUploadImageStep;
-  [self.flickrRequest uploadImageStream:[NSInputStream inputStreamWithData:JPEGData] suggestedFilename:@"" MIMEType:@"image/jpeg" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"is_public", nil]];
+//  NSData *JPEGData = UIImageJPEGRepresentation(image, 1.0);
+//  self.flickrRequest.sessionInfo = kUploadImageStep;
+//  [self.flickrRequest uploadImageStream:[NSInputStream inputStreamWithData:JPEGData] suggestedFilename:@"" MIMEType:@"image/jpeg" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"is_public", nil]];
+  
+  [NotificationController createNextNotification];
 }
 
 

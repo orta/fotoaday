@@ -19,6 +19,7 @@
 		289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */; };
 		6096638812468C7C006C7E28 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096638712468C7C006C7E28 /* CFNetwork.framework */; };
 		6096638B12468C94006C7E28 /* libObjectiveFlickr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096638312468C54006C7E28 /* libObjectiveFlickr.a */; };
+		60A710B21247DC2400F4CD3E /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A710B11247DC2400F4CD3E /* NotificationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		32CA4F630368D1EE00C91783 /* fotoaday_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fotoaday_Prefix.pch; sourceTree = "<group>"; };
 		6096637A12468C54006C7E28 /* ObjectiveFlickr.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveFlickr.xcodeproj; path = ../3rd/objectiveflickr/ObjectiveFlickr.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6096638712468C7C006C7E28 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		60A710B01247DC2400F4CD3E /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		60A710B11247DC2400F4CD3E /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* fotoaday-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "fotoaday-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +90,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* fotoadayAppDelegate.h */,
 				1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */,
+				60A710B01247DC2400F4CD3E /* NotificationController.h */,
+				60A710B11247DC2400F4CD3E /* NotificationController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				1D3623260D0F684500981E51 /* fotoadayAppDelegate.m in Sources */,
 				289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */,
 				289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */,
+				60A710B21247DC2400F4CD3E /* NotificationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

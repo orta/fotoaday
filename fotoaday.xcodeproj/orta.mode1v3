@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,6 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>11</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -300,7 +299,7 @@
 							<real>282</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>1430 -88 1341 770 1440 -180 1920 1080 </string>
+						<string>1702 3 1341 770 1440 -180 1920 1080 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -311,12 +310,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>fotoadayAppDelegate.m</string>
+								<string>NotificationController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,20 +325,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>fotoadayAppDelegate.m</string>
+										<string>NotificationController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>60A710AD1247DC0100F4CD3E</string>
+										<string>60A7110D1247E50800F4CD3E</string>
 										<key>history</key>
 										<array>
 											<string>6096642D12469E52006C7E28</string>
-											<string>609664751246A434006C7E28</string>
 											<string>60B268051246B931002D26D7</string>
-											<string>60A7109E1247DB1200F4CD3E</string>
-											<string>60A7109F1247DB1200F4CD3E</string>
-											<string>60A710A01247DB1200F4CD3E</string>
-											<string>60A710A11247DB1200F4CD3E</string>
+											<string>60A710F01247E44200F4CD3E</string>
+											<string>60A710F11247E44200F4CD3E</string>
+											<string>60A711081247E50800F4CD3E</string>
+											<string>60A711091247E50800F4CD3E</string>
+											<string>60A7110A1247E50800F4CD3E</string>
+											<string>60A7110B1247E50800F4CD3E</string>
+											<string>60A7110C1247E50800F4CD3E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -351,7 +354,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1037, 724}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1430 -88 1341 770 1440 -180 1920 1080 </string>
+								<string>1702 3 1341 770 1440 -180 1920 1080 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -371,7 +374,7 @@
 								<key>Frame</key>
 								<string>{{0, 729}, {1037, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1430 -88 1341 770 1440 -180 1920 1080 </string>
+								<string>1702 3 1341 770 1440 -180 1920 1080 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -537,13 +540,13 @@
 	<array>
 		<string>60A710AE1247DC0100F4CD3E</string>
 		<string>60A710AF1247DC0100F4CD3E</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>6096637312468C03006C7E28</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/orta/spiel/iphone/fotoaday/fotoaday.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>1430 -88 1341 770 1440 -180 1920 1080 </string>
+	<string>1702 3 1341 770 1440 -180 1920 1080 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -559,12 +562,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>fotoadayAppDelegate.m</string>
+								<string>NotificationController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -581,8 +586,6 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -924,7 +927,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
