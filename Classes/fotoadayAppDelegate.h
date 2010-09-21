@@ -39,4 +39,5 @@
 
 - (void) setAndStoreFlickrAuthToken:(NSString *)inAuthToken;
 - (void) callImagePicker;
+- (void) uploadInBG: (UIImage *) image;
 @end

@@ -77,6 +77,13 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 }
 
 - (void)_startUpload:(UIImage *)image {
+  UIDevice* device = [UIDevice currentDevice];
+  if ([device respondsToSelector:@selector(isMultitaskingSupported)]){
+    [self uploadInBG:image];
+    return;
+  }
+    
+  
   [mainViewController setStatus:@"uploading"];
 
   NSData *JPEGData = UIImageJPEGRepresentation(image, 1.0);
@@ -84,6 +91,23 @@ NSString *kUploadImageStep = @"kUploadImageStep";
   [self.flickrRequest uploadImageStream:[NSInputStream inputStreamWithData:JPEGData] suggestedFilename:@"" MIMEType:@"image/jpeg" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"is_public", nil]];
   
   [NotificationController createNextNotification];
+}
+
+- (void) uploadInBG: (UIImage *) image {
+  
+  NSLog(@"background!");
+
+    UIBackgroundTaskIdentifier bgTask = [[UIApplication sharedApplication]
+                                         beginBackgroundTaskWithExpirationHandler:^{}];
+    
+    NSData *JPEGData = UIImageJPEGRepresentation(image, 0.7);
+    self.flickrRequest.sessionInfo = kUploadImageStep;
+    [self.flickrRequest uploadImageStream:[NSInputStream inputStreamWithData:JPEGData] suggestedFilename:@"" MIMEType:@"image/jpeg" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"is_public", nil]];
+    
+    [NotificationController createNextNotification];  
+    
+    [[UIApplication sharedApplication] endBackgroundTask:bgTask];
+
 }
 
 - (void) callImagePicker{
@@ -128,7 +152,9 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 #pragma mark OFFlickrAPIRequest delegate methods
 
 - (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest imageUploadSentBytes:(NSUInteger)inSentBytes totalBytes:(NSUInteger)inTotalBytes {
-    [mainViewController setStatus: [NSString stringWithFormat:@"%lu/%lu (KB)", inSentBytes / 1024, inTotalBytes / 1024]];
+  NSLog(@"updating");
+  [mainViewController setStatus: [NSString stringWithFormat:@"%lu/%lu (KB)", inSentBytes / 1024, inTotalBytes / 1024]];
+
 }
 
 
@@ -212,7 +238,8 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 - (OFFlickrAPIRequest *)flickrRequest {
 	if (!flickrRequest) {
 		flickrRequest = [[OFFlickrAPIRequest alloc] initWithAPIContext:self.flickrContext];
-		flickrRequest.delegate = self;		
+		flickrRequest.delegate = self;
+    flickrRequest.requestTimeoutInterval = 3000;
 	}
 	
 	return flickrRequest;

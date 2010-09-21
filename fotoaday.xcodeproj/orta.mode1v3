@@ -274,8 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>7</integer>
+									<integer>22</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -299,7 +298,7 @@
 							<real>282</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>1893 -67 1341 770 1440 -180 1920 1080 </string>
+						<string>1588 -92 1341 770 1440 -180 1920 1080 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -329,18 +328,18 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>60A7153F12492AD100F4CD3E</string>
+										<string>60A71577124963C900F4CD3E</string>
 										<key>history</key>
 										<array>
 											<string>60B268051246B931002D26D7</string>
 											<string>60A711091247E50800F4CD3E</string>
 											<string>60A7113F1247EAEC00F4CD3E</string>
 											<string>60A7114D1247EC0500F4CD3E</string>
-											<string>60A714F612491A6200F4CD3E</string>
 											<string>60A7151612491E0400F4CD3E</string>
 											<string>60A7151712491E0400F4CD3E</string>
 											<string>60A7151812491E0400F4CD3E</string>
-											<string>60A7153A12492ABA00F4CD3E</string>
+											<string>60A7155E12495DC300F4CD3E</string>
+											<string>60A7155F12495DC300F4CD3E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -354,7 +353,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1037, 724}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1893 -67 1341 770 1440 -180 1920 1080 </string>
+								<string>1588 -92 1341 770 1440 -180 1920 1080 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -374,7 +373,7 @@
 								<key>Frame</key>
 								<string>{{0, 729}, {1037, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1893 -67 1341 770 1440 -180 1920 1080 </string>
+								<string>1588 -92 1341 770 1440 -180 1920 1080 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -538,6 +537,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>60A71578124963C900F4CD3E</string>
 		<string>60A7152B1249227000F4CD3E</string>
 		<string>60A7152D1249227000F4CD3E</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -546,7 +546,7 @@
 		<string>/Users/orta/spiel/iphone/fotoaday/fotoaday.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>1893 -67 1341 770 1440 -180 1920 1080 </string>
+	<string>1588 -92 1341 770 1440 -180 1920 1080 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
