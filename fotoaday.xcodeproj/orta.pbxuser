@@ -10,9 +10,9 @@
 	};
 	1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1475, 3250}}";
-			sepNavSelRange = "{5614, 0}";
-			sepNavVisRange = "{4198, 2194}";
+			sepNavIntBoundsRect = "{{0, 0}, {1475, 3471}}";
+			sepNavSelRange = "{2086, 0}";
+			sepNavVisRange = "{1819, 2015}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* fotoaday */ = {
@@ -142,6 +142,8 @@
 			60A7151712491E0400F4CD3E /* PBXTextBookmark */ = 60A7151712491E0400F4CD3E /* PBXTextBookmark */;
 			60A7151812491E0400F4CD3E /* PBXTextBookmark */ = 60A7151812491E0400F4CD3E /* PBXTextBookmark */;
 			60A7151912491E0400F4CD3E /* PBXTextBookmark */ = 60A7151912491E0400F4CD3E /* PBXTextBookmark */;
+			60A7151C12491E9600F4CD3E /* PBXTextBookmark */ = 60A7151C12491E9600F4CD3E /* PBXTextBookmark */;
+			60A7152112491F2F00F4CD3E /* PBXTextBookmark */ = 60A7152112491F2F00F4CD3E /* PBXTextBookmark */;
 			60B268051246B931002D26D7 = 60B268051246B931002D26D7 /* PlistBookmark */;
 		};
 		sourceControlManager = 6096637512468C03006C7E28 /* Source Control */;
@@ -271,7 +273,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 135";
 		rLen = 0;
-		rLoc = 5183;
+		rLoc = 5222;
 		rType = 0;
 		vrLen = 1758;
 		vrLoc = 5774;
@@ -322,7 +324,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 232;
+		rLoc = 234;
 		rType = 1;
 	};
 	60A714F212491A4200F4CD3E /* PBXTextBookmark */ = {
@@ -330,7 +332,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 229";
 		rLen = 0;
-		rLoc = 8665;
+		rLoc = 8704;
 		rType = 0;
 		vrLen = 564;
 		vrLoc = 8223;
@@ -361,7 +363,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 232;
+		rLoc = 234;
 		rType = 1;
 	};
 	60A714F812491A6200F4CD3E /* PBXTextBookmark */ = {
@@ -369,7 +371,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 210";
 		rLen = 0;
-		rLoc = 8015;
+		rLoc = 8054;
 		rType = 0;
 		vrLen = 1770;
 		vrLoc = 7297;
@@ -379,7 +381,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 64";
 		rLen = 0;
-		rLoc = 1918;
+		rLoc = 1893;
 		rType = 0;
 		vrLen = 1768;
 		vrLoc = 1109;
@@ -389,7 +391,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 66";
 		rLen = 0;
-		rLoc = 1987;
+		rLoc = 1962;
 		rType = 0;
 		vrLen = 1729;
 		vrLoc = 596;
@@ -399,7 +401,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 47";
 		rLen = 0;
-		rLoc = 1317;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1726;
 		vrLoc = 596;
@@ -409,7 +411,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 147";
 		rLen = 0;
-		rLoc = 5832;
+		rLoc = 5871;
 		rType = 0;
 		vrLen = 2176;
 		vrLoc = 4395;
@@ -419,7 +421,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 147";
 		rLen = 0;
-		rLoc = 5832;
+		rLoc = 5871;
 		rType = 0;
 		vrLen = 2171;
 		vrLoc = 4396;
@@ -429,7 +431,7 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 229";
 		rLen = 0;
-		rLoc = 8665;
+		rLoc = 8704;
 		rType = 0;
 		vrLen = 455;
 		vrLoc = 7945;
@@ -519,10 +521,30 @@
 		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
 		name = "fotoadayAppDelegate.m: 147";
 		rLen = 0;
-		rLoc = 5614;
+		rLoc = 5653;
 		rType = 0;
 		vrLen = 2194;
 		vrLoc = 4198;
+	};
+	60A7151C12491E9600F4CD3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
+		name = "fotoadayAppDelegate.m: 48";
+		rLen = 0;
+		rLoc = 1308;
+		rType = 0;
+		vrLen = 2320;
+		vrLoc = 2997;
+	};
+	60A7152112491F2F00F4CD3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* fotoadayAppDelegate.m */;
+		name = "fotoadayAppDelegate.m: 69";
+		rLen = 0;
+		rLoc = 2086;
+		rType = 0;
+		vrLen = 2015;
+		vrLoc = 1819;
 	};
 	60B268051246B931002D26D7 /* PlistBookmark */ = {
 		isa = PlistBookmark;

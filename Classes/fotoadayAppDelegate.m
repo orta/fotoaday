@@ -44,7 +44,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 	}
 	
 	if ([self.flickrContext.authToken length]) {
-    NSLog(@"auth found");
+
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[flickrRequest callAPIMethodWithGET:@"flickr.auth.checkToken" arguments:nil];
     [self callImagePicker];
@@ -66,7 +66,8 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [mainViewController setStatus:@"cancelled?"];
+    [mainViewController setStatus:@"no problem"];
+  [mainViewController dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -121,6 +122,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
   [mainViewController dismissModalViewControllerAnimated:YES];
 }
+
 
 
 #pragma mark OFFlickrAPIRequest delegate methods
