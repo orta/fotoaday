@@ -1,10 +1,10 @@
 # xcode noise
-*.mode1v3
-*.pbxuser
-*.perspective 
-*.perspectivev3
-*.pyc 
-*~.nib/
+fotoaday.xcodeproj/*.mode1v3
+fotoaday.xcodeproj/*.pbxuser
+fotoaday.xcodeproj/*.perspective 
+fotoaday.xcodeproj/*.perspectivev3
+fotoaday.xcodeproj/*.pyc 
+fotoaday.xcodeproj/*~.nib/
 build/*
 
 # Textmate - if you build your xcode projects with it

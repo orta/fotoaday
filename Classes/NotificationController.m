@@ -25,7 +25,7 @@
   NSDate * currentDate = [NSDate date];
 
   NSDateComponents * components = [[[NSDateComponents alloc] init] autorelease];
-  [components setSecond:10];
+  [components setHour:24];
   
   NSCalendar *gregorian = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
   NSDate *date = [gregorian dateByAddingComponents:components toDate:currentDate options:0];
