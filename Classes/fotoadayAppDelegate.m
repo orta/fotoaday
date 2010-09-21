@@ -44,9 +44,9 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 	}
 	
 	if ([self.flickrContext.authToken length]) {
+    NSLog(@"auth found");
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[flickrRequest callAPIMethodWithGET:@"flickr.auth.checkToken" arguments:nil];
-   
     [self callImagePicker];
 
 	}else{
@@ -58,6 +58,11 @@ NSString *kUploadImageStep = @"kUploadImageStep";
     
     [controller release];    
   }
+}
+
+-(void) applicationDidBecomeActive:(UIApplication *)application{
+  [mainViewController setStatus:@"loading"];
+  [self callImagePicker];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -139,7 +144,8 @@ NSString *kUploadImageStep = @"kUploadImageStep";
     [flickrRequest callAPIMethodWithPOST:@"flickr.photos.setMeta" arguments:[NSDictionary dictionaryWithObjectsAndKeys:photoID, @"photo_id", @"fotoaday 1", @"title", @"fotoaday", @"description", nil]];        		        
 	}
   else if (inRequest.sessionInfo == kSetImagePropertiesStep) {
-    [mainViewController setStatus:@"done!"];
+    [mainViewController setStatus:@"close me!"];
+    
   }
   
   
@@ -218,13 +224,6 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 - (void)applicationWillEnterForeground:(UIApplication *)application {
   /*
    Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
-   */
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-  /*
-   Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
    */
 }
 
