@@ -51,7 +51,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 
 	}else{
 
-    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
+    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil] ;
     controller.delegate = self;    
     controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [mainViewController presentModalViewController:controller animated:YES];
@@ -93,7 +93,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
   
   if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == YES){
     [mainViewController setStatus:@"shooting"];
-    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init] ;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     imagePicker.delegate = self;
     [mainViewController presentModalViewController:imagePicker animated:YES];     
@@ -126,6 +126,13 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 
 
 #pragma mark OFFlickrAPIRequest delegate methods
+
+- (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest imageUploadSentBytes:(NSUInteger)inSentBytes totalBytes:(NSUInteger)inTotalBytes {
+    [mainViewController setStatus: [NSString stringWithFormat:@"%lu/%lu (KB)", inSentBytes / 1024, inTotalBytes / 1024]];
+}
+
+
+
 - (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didCompleteWithResponse:(NSDictionary *)inResponseDictionary {
 	
   // Token has been authed
