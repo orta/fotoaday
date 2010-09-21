@@ -127,17 +127,22 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 
 #pragma mark OFFlickrAPIRequest delegate methods
 - (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didCompleteWithResponse:(NSDictionary *)inResponseDictionary {
-	if (inRequest.sessionInfo == kGetAuthTokenStep) {
+	
+  // Token has been authed
+  if (inRequest.sessionInfo == kGetAuthTokenStep) {
 		[self setAndStoreFlickrAuthToken:[[inResponseDictionary valueForKeyPath:@"auth.token"] textContent]];
 		self.flickrUserName = [inResponseDictionary valueForKeyPath:@"auth.user.username"];
     [mainViewController setStatus:[NSString stringWithFormat:@">_ %@", self.flickrUserName]];
     [self callImagePicker];
 
 	}
-	else if (inRequest.sessionInfo == kCheckTokenStep) {
+  
+  // Token has been checked on init
+  else if (inRequest.sessionInfo == kCheckTokenStep) {
 		self.flickrUserName = [inResponseDictionary valueForKeyPath:@"auth.user.username"];
 	}
   
+  // Image is uploaded, now set metadata
   if (inRequest.sessionInfo == kUploadImageStep) {    
     [mainViewController setStatus:@"almost there!"];    
     NSString *photoID = [[inResponseDictionary valueForKeyPath:@"photoid"] textContent];
@@ -149,6 +154,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
     [attributes setObject:title forKey:@"title"];
     [flickrRequest callAPIMethodWithPOST:@"flickr.photos.setMeta" arguments:attributes];        		        
 	}
+  // Metadata set, app is done
   else if (inRequest.sessionInfo == kSetImagePropertiesStep) {
     [mainViewController setStatus:@"close me!"];
     
