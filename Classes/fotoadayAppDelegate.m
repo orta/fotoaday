@@ -141,7 +141,11 @@ NSString *kUploadImageStep = @"kUploadImageStep";
     NSString *photoID = [[inResponseDictionary valueForKeyPath:@"photoid"] textContent];
     
     flickrRequest.sessionInfo = kSetImagePropertiesStep;
-    [flickrRequest callAPIMethodWithPOST:@"flickr.photos.setMeta" arguments:[NSDictionary dictionaryWithObjectsAndKeys:photoID, @"photo_id", @"fotoaday 1", @"title", @"fotoaday", @"description", nil]];        		        
+    
+    NSMutableDictionary * attributes = [NSMutableDictionary dictionaryWithObject:photoID forKey:@"photo_id"];
+    NSString *title = [NSString stringWithFormat:@"fotoaday %@", [NotificationController currentDayCount]];
+    [attributes setObject:title forKey:@"title"];
+    [flickrRequest callAPIMethodWithPOST:@"flickr.photos.setMeta" arguments:attributes];        		        
 	}
   else if (inRequest.sessionInfo == kSetImagePropertiesStep) {
     [mainViewController setStatus:@"close me!"];

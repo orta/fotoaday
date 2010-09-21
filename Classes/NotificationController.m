@@ -17,9 +17,9 @@
     count = 0;
   }
   count++;
+  
   [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"number_of_days"];
   [[NSUserDefaults standardUserDefaults] synchronize];
-
   
   UILocalNotification *localNote = [[UILocalNotification alloc] init];
   NSDate * currentDate = [NSDate date];
